@@ -2,15 +2,18 @@
 const eslint = require("@eslint/js");
 const tseslint = require("typescript-eslint");
 const angular = require("angular-eslint");
+const prettierConfig = require("eslint-config-prettier");
+const prettierPlugin = require("eslint-plugin-prettier");
 
 module.exports = tseslint.config(
   {
     files: ["**/*.ts"],
     extends: [
       eslint.configs.recommended,
+      prettierConfig,
       ...tseslint.configs.recommended,
       ...tseslint.configs.stylistic,
-      ...angular.configs.tsRecommended,
+      ...angular.configs.tsRecommended
     ],
     processor: angular.processInlineTemplates,
     rules: {
@@ -30,6 +33,10 @@ module.exports = tseslint.config(
           style: "kebab-case",
         },
       ],
+      "prettier/prettier": "error",
+    },
+    plugins: {
+      prettier: prettierPlugin,
     },
   },
   {
