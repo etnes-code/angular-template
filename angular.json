@@ -5,7 +5,11 @@
   "projects": {
     "myapp": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "optimization": false,
             "outputPath": "dist/myapp",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -27,7 +32,7 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -38,7 +43,9 @@
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.production.ts"
                 }
+                
               ],
+              "optimization" : true,
               "budgets": [
                 {
                   "type": "initial",
@@ -64,7 +71,7 @@
                 }
               ]
             },
-            "test":{
+            "test": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -72,7 +79,7 @@
                 }
               ]
             },
-            "stagging":{
+            "stagging": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -113,7 +120,7 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
