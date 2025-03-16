@@ -29,7 +29,8 @@ jobs:
     - run: npm ci
     
     - name: run tests
-    - run: nom run test:ci
+      uses: actions/setup-node@v4
+    - run: npm run test:ci
     
     - name: Build
     - run: npm run build
