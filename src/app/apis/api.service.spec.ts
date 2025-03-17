@@ -1,9 +1,6 @@
-import { TestBed, inject } from '@angular/core/testing';
-import { provideHttpClientTesting } from '@angular/common/http/testing';
-import { environment } from '../../environments/environment';
-
-import { ApiService } from './api.service';
+import { TestBed } from '@angular/core/testing';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { ApiService } from './api.service';
 
 
 describe('ApiService', () => {
