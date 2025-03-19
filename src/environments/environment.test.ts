@@ -1,3 +1,3 @@
 export const environment = {
-    "apiurl": "'http://my-test-url'"
+  apiurl: "'http://my-test-url'",
 };

@@ -1,3 +1,3 @@
 export const environment = {
-    "apiurl": "'http://my-stagging-url'"
+  apiurl: "'http://my-stagging-url'",
 };
