@@ -7,7 +7,7 @@ import { environment } from '@environment/environment';
 })
 export class ApiService {
   private http: HttpClient = inject(HttpClient);
-  
+
   fetchData() {
     return this.http.get(environment.apiurl);
   }
