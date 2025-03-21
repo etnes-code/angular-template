@@ -1,3 +1,7 @@
+import packageJson from '../../package.json';
+
 export const environment = {
-  apiurl: "'http://my-prod-url'",
+  appVersion: packageJson.version,
+  production: true,
+  base: 'area',
 };

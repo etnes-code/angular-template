@@ -1,3 +1,7 @@
+import packageJson from '../../package.json';
+
 export const environment = {
-  apiurl: "'http://my-developpement-url'",
+  appVersion: packageJson.version + '--dev',
+  production: false,
+  base: 'area',
 };

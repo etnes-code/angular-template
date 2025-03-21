@@ -1,3 +1,7 @@
+import packageJson from '../../package.json';
+
 export const environment = {
-  apiurl: "'http://my-stagging-url'",
+  appVersion: packageJson.version + '--stagging',
+  production: false,
+  base: 'area',
 };
