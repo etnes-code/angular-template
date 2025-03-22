@@ -25,15 +25,18 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Quick-start-angular-template');
+    expect(compiled.querySelector('h1')?.textContent).toContain(
+      'Quick-start-angular-template'
+    );
   });
-
 
   it('should have the number version in html', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges(); // Déclenche la détection des changements
-  
+
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('footer')?.textContent?.trim()).toContain(environment.appVersion);
+    expect(compiled.querySelector('footer')?.textContent?.trim()).toContain(
+      environment.appVersion
+    );
   });
 });
