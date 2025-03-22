@@ -9,6 +9,6 @@ import { environment } from '@environment/environment';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'myapp';
+  title = 'Quick-start-angular-template';
   @HostBinding('attr.app-version') appVersionAttr = environment.appVersion;
 }
